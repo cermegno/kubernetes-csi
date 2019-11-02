@@ -11,3 +11,7 @@ After that the training covers:
 - Storage limits
 
 The labs have been tested with the DellEMC XtremIO CSI driver
+
+The training uses also 2 containers images from Docker Hub:
+- docker pull cermegno/myfirstcontainer
+- docker pull cermegno/simplog
