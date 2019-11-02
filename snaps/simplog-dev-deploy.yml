@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: simplog
+spec:
+  selector:
+    matchLabels:
+      app: simplog
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: simplog
+    spec:
+      containers:
+        - name: simplog
+          image: cermegno/simplog:v1
+          ports:
+            - containerPort: 80
+              name: "http-server"
+          volumeMounts:
+            - mountPath: "/app/data"
+              name: simplog-data-folder
+
+      volumes:
+        - name: simplog-data-folder
+          persistentVolumeClaim:
+            claimName: simplog-restore
+
