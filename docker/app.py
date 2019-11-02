@@ -5,7 +5,7 @@ import socket
 
 # Read the IP of Redis through an ENV Var or assign 'redis' by default
 REDIS_SERVICE_HOST = os.environ.get('REDIS_SERVICE_HOST','redis')
-print('Attempting to connect to Redis at: ',REDIS_SERVICE_HOST)
+print(REDIS_SERVICE_HOST)
 redis = Redis(host=REDIS_SERVICE_HOST, db=0, socket_connect_timeout=2, socket_timeout=2)
 
 app = Flask(__name__)
