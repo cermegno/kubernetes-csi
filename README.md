@@ -10,7 +10,9 @@ After that the training covers:
 - Quotas for storage resources
 - Storage limits
 
-The labs have been tested with the DellEMC XtremIO CSI driver
+The labs have been tested with the DellEMC XtremIO CSI driver:
+
+[https://github.com/dell/csi-xtremio-deploy](https://github.com/dell/csi-xtremio-deploy)
 
 The training uses also 2 containers images from Docker Hub:
 - docker pull cermegno/myfirstcontainer
